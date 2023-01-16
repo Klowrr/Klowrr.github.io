@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Membuat Navbar</title>
+</head>
+<body>
+  <img style="width: 100%;" src="Header.png">
+  <div class="w3-bar w3-yellow">
+    <button class="w3-bar-item w3-button" onclick="openKota('home')">Home</button>
+    <button class="w3-bar-item w3-button" onclick="openKota('python')">Python</button>
+    <button class="w3-bar-item w3-button" onclick="openKota('C++')">C++</button>
+    <button class="w3-bar-item w3-button" onclick="openKota('java')">Java</button>
+
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Pemograman Web</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <button class="w3-bar-item w3-button" onclick="openKota('html')">HTML</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('css')">CSS</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('javascript')">JavaScript</button>
+      </div>
+    </div>
+    <button class="w3-bar-item w3-button" onclick="openKota('about')">About</button>
+  </div>
+  <center>
+  <div id="home" class="w3-container kota w3-animate-zoom" style="display: block;">
+    <h1 style="font-weight: bold;">Universitas Komputer Indonesia</h1>
+    <p>Universitas Komputer Indonesia adalah sebuah perguruan tinggi swasta terkemuka yang berada di kota Bandung, Jawa Barat, tepatnya berlokasi di Jl.Dipatiukur No 112-114.Rektornya saat ini dijabat oleh Prof. Dr. Ir. H. Eddy Soeryanto Soegoto, M.T.</p>
+    <img src="gedung.jpg" style="width: 50%;">
+  </div>
+  <div id="python" class="w3-container kota w3-spin" style="display: none;">
+    <h1 style="font-weight: bold;">Python</h1>
+    <p>Python adalah bahasa pemrograman tujuan umum yang ditafsirkan, tingkat tinggi. Dibuat oleh Guido van Rossum dan pertama kali dirilis pada tahun 1991, filosofi desain Python menekankan keterbacaan kode dengan penggunaan spasi putih yang signifikan.</p>
+    <img src="python.jpg" style="width: 30%;">
+  </div>
+  <div id="C++" class="w3-container kota w3-animate-fading" style="display: none;">
+    <h1 style="font-weight: bold;">C++</h1>
+    <p>C++ adalah bahasa pemrograman komputer yang dibuat oleh Bjarne Stroustrup, yang merupakan perkembangan dari bahasa C dikembangkan di Bell Labs. Pada awal tahun 1970-an, bahasa itu merupakan peningkatan dari bahasa sebelumnya, yaitu B.</p>
+    <img src="C++.png" style="width: 30%;">
+  </div>
+  <div id="java" class="w3-container kota w3-animate-opacity" style="display: none;">
+    <h1 style="font-weight: bold;">Java</h1>
+    <p>Java adalah bahasa pemrograman yang dapat dijalankan di berbagai komputer termasuk telepon genggam. Bahasa ini awalnya dibuat oleh James Gosling saat masih bergabung di Sun Microsystems, yang saat ini merupakan bagian dari Oracle dan dirilis tahun 1995.</p>
+    <img src="java.png" style="width: 30%;">
+  </div>
+  <div id="html" class="w3-container kota w3-animate-left" style="display: none;">
+    <h1 style="font-weight: bold;">HTML</h1>
+    <p>Hypertext Markup Language adalah bahasa markah standar untuk dokumen yang dirancang untuk ditampilkan di peramban internet. Ini dapat dibantu oleh teknologi seperti Cascading Style Sheets dan bahasa skrip lainnya seperti JavaScript, VBScript, dan PHP.</p>
+    <img src="ihtml.png" style="width: 30%;">
+  </div>
+  <div id="css" class="w3-container kota w3-animate-right" style="display: none;">
+    <h1 style="font-weight: bold;">CSS</h1>
+    <p>Cascading Style Sheet merupakan aturan untuk mengatur beberapa komponen dalam sebuah web sehingga akan lebih terstruktur dan seragam. CSS bukan merupakan bahasa pemrograman.</p>
+    <img src="icss.png" style="width: 30%;">
+  </div>
+  <div id="javascript" class="w3-container kota w3-animate-bottom" style="display: none;">
+    <h1 style="font-weight: bold;">JavaScript</h1>
+    <p>JavaScript adalah suatu bahasa pemrograman tingkat tinggi dan dinamis. JavaScript populer di internet dan dapat bekerja di sebagian besar penjelajah web populer seperti Google Chrome, Internet Explorer, Mozilla Firefox, Netscape dan Opera. Kode JavaScript dapat disisipkan dalam halaman web menggunakan tag script.</p>
+    <img src="js.png" style="width: 30%;">
+  </div>
+  <div id="about" class="w3-container kota w3-animate-top" style="display: none;">
+    <h1 style="font-weight: bold;">About</h1>
+    <table>
+      <tr>
+        <td>Nama</td>
+        <td>:</td>
+        <td>Apriana Cahya Bowo Setiadi</td>
+      </tr>
+      <tr>
+        <td>NIM</td>
+        <td>:</td>
+        <td>10122110</td>
+      </tr>
+      <tr>
+        <td>Kelas</td>
+        <td>:</td>
+        <td>IF-3</td>
+      </tr>
+      <tr>
+        <td>Fakultas</td>
+        <td>:</td>
+        <td>Teknik dan Ilmu Komputer</td>
+      </tr>
+      <tr>
+        <td>Prodi</td>
+        <td>:</td>
+        <td>Teknik Informatika</td>
+      </tr>
+      <tr style="text-align: center;">
+        <td colspan="3">Universitas Komputer Indonesia</td>
+      </tr>
+    </table>
+  </div>
+  </center>
+  <script>
+    function openKota(namakota) {
+      var i;
+      var x = document.getElementsByClassName("kota");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      document.getElementById(namakota).style.display = "block";
+    }
+  </script>
+</body>
+</html>
